@@ -1,0 +1,51 @@
+{
+  "name": "clsv",
+  "version": "1.0.0",
+  "keywords": [
+    "class-variance-authority",
+    "clsx",
+    "css",
+    "cva",
+    "tailwind",
+    "variants"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "knst0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knst0/clsv.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "check": "tsc --noEmit",
+    "fmt": "oxfmt",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "prepublishOnly": "bun run build",
+    "test": "vitest run tests/"
+  },
+  "devDependencies": {
+    "mitata": "^1.0.34",
+    "oxfmt": "^0.49.0",
+    "oxlint": "^1.64.0",
+    "tsdown": "^0.22.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
+  }
+}

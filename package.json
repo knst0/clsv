@@ -1,5 +1,5 @@
 {
-  "name": "clsv",
+  "name": "@knst/clsv",
   "version": "1.0.0",
   "keywords": [
     "class-variance-authority",

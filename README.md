@@ -1,8 +1,8 @@
-# knst0/clsv
+# knst0//clsv
 
 Small class name utilities for TypeScript projects.
 
-`clsv` provides:
+`@knst/clsv` provides:
 
 - `cx` for joining strings, arrays, objects, numbers, and falsy values into a class string.
 - `cva` for declaring variant-based class factories.
@@ -12,13 +12,13 @@ Small class name utilities for TypeScript projects.
 ## Installation
 
 ```shell
-npm install clsv
+npm install @knst/clsv
 ```
 
 ```shell
-yarn add clsv
-pnpm add clsv
-bun add clsv
+yarn add @knst/clsv
+pnpm add @knst/clsv
+bun add @knst/clsv
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ bun add clsv
 ### cx
 
 ```ts
-import { cx } from "clsv";
+import { cx } from "@knst/clsv";
 
 const className = cx("inline-flex items-center", ["rounded-md", false && "opacity-50"], {
   "bg-blue-600 text-white": true,
@@ -41,7 +41,7 @@ const className = cx("inline-flex items-center", ["rounded-md", false && "opacit
 ### cva
 
 ```ts
-import { cva, type VariantProps } from "clsv";
+import { cva, type VariantProps } from "@knst/clsv";
 
 const button = cva({
   base: "inline-flex items-center justify-center rounded-md font-medium",
@@ -89,7 +89,7 @@ Pass `null` for a variant to explicitly omit that variant and ignore its default
 ### defineConfig
 
 ```ts
-import { defineConfig } from "clsv";
+import { defineConfig } from "@knst/clsv";
 import { twMerge } from "tailwind-merge";
 
 export const { cva, cx } = defineConfig({
